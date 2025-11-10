@@ -19,7 +19,7 @@ function Team() {
   ]
 
   return (
-    <div className={`${teamCSS.Team_Wrapper}  border flex items-center justify-center`}>
+    <div className={`${teamCSS.Team_Wrapper}  section`}>
 
 
       <h2 className="md:text-4xl text-xl text-white font-bold text-center">
@@ -44,7 +44,7 @@ function Team() {
               768: { perPage: 1 },
             },
           }}
-          extensions={{ AutoScroll }}
+       
         >
           {teamMembers.map((member, index) => (
             <SplideSlide key={index}>
