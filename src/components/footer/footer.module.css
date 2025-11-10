@@ -1,0 +1,139 @@
+.Footer_Wrapper {
+    background: url('./../../assets/bs-section.jpg') no-repeat center center/cover;
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding: 60px 40px;
+}
+
+.Footer_Wrapper::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: rgba(4,11,17,0.85);
+}
+
+.Footer_Wrapper h2 {
+    font-size: 28px;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.Footer_Wrapper h2 span {
+    color: var(--primary-color);
+}
+
+.FooterLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.FooterLinks h3 {
+    color: var(--primary-color);
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.FooterLinks p a {
+    color: rgba(200,200,200,0.8);
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 5px 0;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.FooterLinks p a:hover {
+    color: #fff;
+}
+
+.inputWrapper {
+    display: flex;
+    margin: 10px 0;
+    width: 100%;
+    gap: 5px;
+}
+
+.inputWrapper input {
+    flex: 1;
+    height: 45px;
+    padding: 0 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+}
+
+.inputWrapper button {
+    padding: 0 15px;
+    height: 45px;
+    background-color: var(--primary-color);
+    color: #1e1e11;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.inputWrapper button:hover {
+    opacity: 0.9;
+}
+
+.social {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social i {
+    height: 28px;
+    width: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.social i:hover {
+    color: var(--primary-color);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .Footer_Wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 50px 30px;
+        gap: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .Footer_Wrapper {
+        grid-template-columns: 1fr;
+        padding: 40px 20px;
+        gap: 20px;
+    }
+
+    .inputWrapper {
+        flex-direction: column;
+    }
+
+    .inputWrapper input, .inputWrapper button {
+        width: 100%;
+    }
+
+    .FooterLinks h3 {
+        font-size: 20px;
+    }
+}

@@ -8,7 +8,6 @@ import { ReactTyped  }from 'react-typed';
 function Header() {
   return (
     <div className={`${headerCss.Header_wrapper} section`} style={{ backgroundImage: `url(${BgImg})` }}>
-
       <span className={headerCss.element2}></span>
 
       <div className={headerCss.Header_Content}>
@@ -21,8 +20,7 @@ function Header() {
               loop={true}
             ></ReactTyped>
           </span>
-          
-           <br/>
+          <br/>
           Explore NFT <br/>
           Collection
         </h2>

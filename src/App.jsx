@@ -10,6 +10,7 @@ import Product from './components/products/Product'
 import Work from './components/work/Work'
 import Team from './components/team/Team'
 import Patners from './components/patners/Patners'
+import Footer from './components/footer/Footer'
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Work/>
       <Team/>
       <Patners/>
+      <Footer/>
       
       
     </div>
