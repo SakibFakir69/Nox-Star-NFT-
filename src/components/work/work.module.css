@@ -1,0 +1,84 @@
+.Work_Wrapper {
+  align-items: center !important;
+  text-align: center;
+  padding: 60px 0;
+  background-attachment: fixed;
+  background:url("./../../assets/bs-section.jpg");
+}
+
+.Work_Wrapper::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(4,17,11,0.9);
+    top:0;
+    left: 0;
+    z-index: -1;
+}
+
+
+.Cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-top: 60px;
+  width: 100%;
+  padding: 0 60px;
+}
+
+.Card {
+  background-color: #141b22;
+  border-radius: 12px;
+  padding: 40px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.Card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px rgba(33, 231, 135, 0.5);
+}
+
+.Card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.Card h3 {
+  color: #fff;
+  font-size: 23px;
+  font-weight: 600;
+}
+
+.Card p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 15px;
+  line-height: 22px;
+  max-width: 280px;
+}
+
+/* Responsive Layouts */
+@media screen and (max-width: 1200px) {
+  .Cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Cards {
+    grid-template-columns: 1fr;
+    padding: 0 30px;
+  }
+
+  .Card {
+    padding: 30px 20px;
+  }
+}
