@@ -1,51 +1,51 @@
-
-
 import React from 'react'
 import headerCss  from './../header/header.module.css'
 import HeroImg from './../../assets/hero-img.png'
-
+import element1 from './../../assets/element-star.png'
+import BgImg from './../../assets/bs-section.jpg'
+import { ReactTyped  }from 'react-typed';
 
 function Header() {
   return (
-    <div className={`${headerCss.Header_wrap} section`}>
+    <div className={`${headerCss.Header_wrapper} section`} style={{ backgroundImage: `url(${BgImg})` }}>
 
+      <span className={headerCss.element2}></span>
 
-      <div className={headerCss.header_content}>
+      <div className={headerCss.Header_Content}>
+        <h2 className='font-bold'>
+          with <span>
+            <ReactTyped  
+              strings={['NOXSTART','BOXNFT','NFTBOX']}
+              typeSpeed={30}
+              backSpeed={60}
+              loop={true}
+            ></ReactTyped>
+          </span>
+          
+           <br/>
+          Explore NFT <br/>
+          Collection
+        </h2>
 
-        <h2>with <span></span> <br/>
-        
-        
-        Explore NFT <br/>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis officiis cum obcaecati!</p>
 
-        Collection 
-        
-          </h2>
+        <div className={headerCss.clients}>
+          <p>2021+ <span>Clients</span></p>
+          <p>20000+ <span>Whitelist Profiles</span></p>
+        </div>
 
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis officiis cum obcaecati!</p>
-
-          <div className={headerCss.clients}>
-            <p>2021+ <span>Clients</span></p>
-            <p>20000+ <span>whitelist Profiles</span></p>
-          </div>
-
-          <div className={headerCss.header_btns}>
-            
-            <button className='btn'> <i className='ri-wallet-line'></i>Connect Wallet</button>
-             <button> <i className='ri-links-line'></i>   WhiteList Now</button>
-          </div>
-
+        <div className={headerCss.header_btns}>
+          <button className='btn'><i className='ri-wallet-line'></i>Connect Wallet</button>
+          <button><i className='ri-links-line'></i>Whitelist Now</button>
+        </div>
       </div>
 
-       <div className={headerCss.header_image}>
-
-        <img src={HeroImg}/>
-        
+      <div className={headerCss.Header_image}>
+        <img src={HeroImg} alt='hero-img'/>
+        <img src={element1} alt='element1' id={headerCss.element1}/>
       </div>
-
-
-      
     </div>
   )
 }
 
-export default Header
+export default Header;

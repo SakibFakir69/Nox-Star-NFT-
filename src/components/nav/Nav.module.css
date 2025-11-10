@@ -108,3 +108,13 @@
 
 /* active */
 
+
+@media screen and (max-width: 768px) {
+
+  .NavBtns button {
+
+    display: none;
+
+  }
+
+}
