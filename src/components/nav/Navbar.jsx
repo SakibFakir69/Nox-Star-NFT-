@@ -1,28 +1,22 @@
 import React, { useRef } from "react";
 import navCss from "./../nav/Nav.module.css";
 
-
-
 function Navbar() {
-
-
   const menu = useRef(null);
 
-  const menuHandeler = ()=>{
-
-    menu.current.classList.toggle(navCss.active)
-  }
-
-
+  const menuHandeler = () => {
+    menu.current.classList.toggle(navCss.activeMenu);
+  };
 
   return (
-    <div className={`${navCss.Nav_wrapper}`}>
-      <div className={`${navCss.logo}`}>
+    <div className={navCss.Nav_wrapper} >
+
+      <div className={navCss.logo}>
+
         <a href="#">NoxStar</a>
       </div>
 
-
-      <ul ref={navCss.menu}>
+      <ul ref={menu}   className="border border-red-600">
         <li>
           <a href="#">Home</a>
         </li>
@@ -48,24 +42,18 @@ function Navbar() {
 
       {/* button */}
 
-      <div className={navCss.Navbtns}>
+      <div className={navCss.NavBtns} >
         <button className="btn ">
-
           <i className="ri-discord-line"></i>
-          
-          
           Discord
-
-
         </button>
 
-
         <button>
-
           <i className="ri-wallet-line"></i>
-          
-          Contact</button>
-      <i onClick={menuHandeler}  id={navCss.bars} className="ri-menu-line"></i>
+          Contact
+        </button>
+
+        <i onClick={menuHandeler} id={navCss.bars} className="ri-menu-line"></i>
 
       </div>
     </div>

@@ -15,6 +15,10 @@
   --primary-color:#21e787
 }
 
+body{
+  background-color: #040b11;
+}
+
 button{
   height: 45px;
   width:150px;
@@ -23,7 +27,7 @@ button{
   align-items: center;
   justify-content: center;
   gap:8px;
-  background-color: #1e1e1e;
+  background-color: transparent;
   color: #fff;
   border: 2px solid  transparent;
   transition: 0.6s;
@@ -32,12 +36,15 @@ button{
 }
 
 button:hover{
-  color: #1e1e1e;
-  border-color: transparent;
+  border-color: var(--primary-color);
 }
+
+
 .btn{
   position: relative;
 }
+
+
 .btn::after , .btn::before{
   content: '';
   position: absolute;
@@ -57,18 +64,47 @@ button:hover{
 .btn:hover::after{
   width: 50%;
 }
+
+.btn:hover:after{
+  color: #1e1e1e;
+  width: 50%;
+}
+
 .btn:hover{
   color: #1e1e1e;
+  border-color: transparent;
+
 }
+
 .btn::before{
   background-color: #1e1e1e;
   width: 0;
   z-index: -1;
-  left: 30%;
-
+  left: 0%;
 }
-
-.btn:hover::before{
+.btn:hover:before{
   background-color: var(--primary-color);
   width: 100%;
+
 }
+
+
+/* header */
+
+.section{
+  padding: 90px 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+@media screen and (max-width:1400px) {
+
+  .section{
+    padding:90px 12%;
+
+  }
+  
+}
+

@@ -1,3 +1,5 @@
+
+
 .Nav_wrapper {
   height: 90px;
   width: 100%;
@@ -6,10 +8,11 @@
   justify-content: space-between;
   padding: 0 15%;
   background-color: #040b11;
-  z-index: 999;
+
   position: fixed;
   top: 0;
   left: 0;
+    z-index: 999;
 }
 
 .Nav_wrapper .logo a {
@@ -23,14 +26,14 @@
 .Nav_wrapper ul li a {
   color: #fff;
 }
-.Nav_wrapper ul li a {
+.Nav_wrapper ul li:hover a {
   color: var(--primary-color);
 }
 
 .NavBtns {
   display: flex;
   align-items: center;
-  gap: 22px;
+  gap: 12px;
 }
 
 #bars {
@@ -46,6 +49,7 @@
   cursor: pointer;
   box-shadow: 2px 2px 8px #00954d;
   border: 2px solid transparent;
+  display: none;
 }
 
 #bars:hover {
@@ -63,7 +67,7 @@
 
     #bars{
         display: flex;
-        
+
     }
 
 
