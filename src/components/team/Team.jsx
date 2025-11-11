@@ -20,113 +20,50 @@ function Team() {
 
   return (
     <div className={`${teamCSS.Team_Wrapper} section`}>
-      <h2  className="md:text-4xl text-xl text-white font-bold text-center mb-10">
+      <h2 className="md:text-4xl text-xl text-white font-bold text-center mb-10">
         Our <span className="text-emerald-500">Team</span>
       </h2>
 
       <div className={teamCSS.TeamsCards}>
-       <Splide
-
-       options={{
-        type:"loop",
-        perPage:4,
-        gap:"3rem",
-        breakpoints:{
-         
-
-          600:{
-            perPage:1
-          },
-
-          768:{
-            perPage:1,
-          },
-          1024:{
-            perPage:2
-          },
-          1400:{
-            perPage:3
-          },
-
-          1600:{
-            perPage:4
-          }
-
-
-        }
-       }}
-       
-       >
-        <SplideSlide>
-           <div className={`${teamCSS.TeamCard} card`}>
-          <span></span>
-          <span></span>
-
-          <img src={TeamImg1} alt='img'/>
-          <h3>Jonathan jos <br/> <small>Founder</small></h3>
-
-             <div className={teamCSS.social}>
-                  <i className="ri-facebook-line size-6"></i>
-                  <i className="ri-instagram-line size-6"></i>
-                  <i className="ri-youtube-line size-6"></i>
-                  <i className="ri-twitter-x-line size-6"></i>
-                </div>
-        </div>
-        </SplideSlide>
-         <SplideSlide>
-           <div className={`${teamCSS.TeamCard} card`}>
-          <span></span>
-          <span></span>
-
-          <img src={TeamImg1} alt='img'/>
-          <h3>Jonathan jos <br/> <small>Founder</small></h3>
-
-             <div className={teamCSS.social}>
-                  <i className="ri-facebook-line size-6"></i>
-                  <i className="ri-instagram-line size-6"></i>
-                  <i className="ri-youtube-line size-6"></i>
-                  <i className="ri-twitter-x-line size-6"></i>
-                </div>
-        </div>
-        </SplideSlide>
-         <SplideSlide>
-           <div className={`${teamCSS.TeamCard} card`}>
-          <span></span>
-          <span></span>
-
-          <img src={TeamImg1} alt='img'/>
-          <h3>Jonathan jos <br/> <small>Founder</small></h3>
-
-             <div className={teamCSS.social}>
-                  <i className="ri-facebook-line size-6"></i>
-                  <i className="ri-instagram-line size-6"></i>
-                  <i className="ri-youtube-line size-6"></i>
-                  <i className="ri-twitter-x-line size-6"></i>
-                </div>
-        </div>
-        </SplideSlide>
-         <SplideSlide>
-           <div className={`${teamCSS.TeamCard} card`}>
-          <span></span>
-          <span></span>
-
-          <img src={TeamImg1} alt='img'/>
-          <h3>Jonathan jos <br/> <small>Founder</small></h3>
-
-             <div className={teamCSS.social}>
-                  <i className="ri-facebook-line size-6"></i>
-                  <i className="ri-instagram-line size-6"></i>
-                  <i className="ri-youtube-line size-6"></i>
-                  <i className="ri-twitter-x-line size-6"></i>
-                </div>
-        </div>
-        </SplideSlide>
-       </Splide>
-
-      </div>
-
+        <Splide
+          options={{
+            type: "loop",
+            perPage: 4,
+            gap: "3rem",
+            breakpoints: {
+              1600: { perPage: 4 },
+              1400: { perPage: 4 },
+              1024: { perPage: 3 },
+              768: { perPage: 2 },
+              600: { perPage: 1 },
+            },
+            pagination:false
+          }}
       
-     
+        >
+          {teamMembers.map((member, index) => (
+            <SplideSlide key={index}>
+              <div className={`${teamCSS.TeamCard} card`}>
+                <span></span>
+                <span></span>
+
+                <img src={member.img} alt={member.name} />
+                <h3>
+                  {member.name} <br />
+                  <small>{member.role}</small>
+                </h3>
+
+                <div className={teamCSS.social}>
+                  <i className="ri-facebook-line md:size-7 size-6"></i>
+                  <i className="ri-instagram-line md:size-7 size-6"></i>
+                  <i className="ri-youtube-line md:size-7 size-6"></i>
+                  <i className="ri-twitter-x-line md:size-7 size-6"></i>
+                </div>
+              </div>
+            </SplideSlide>
+          ))}
+        </Splide>
+      </div>
     </div>
   )
 }

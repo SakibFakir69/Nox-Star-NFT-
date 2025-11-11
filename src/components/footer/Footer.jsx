@@ -5,8 +5,8 @@ function Footer() {
   return (
     <footer className={footerCSS.Footer_Wrapper}>
       <div className={footerCSS.FooterLinks}>
-        <h2>NOX <span>STAR</span></h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita nam assumenda dolores reprehenderit vitae dolore?</p>
+        <h2 className='md:font-bold md:text-4xl text-2xl font-semibold'>NOX <span>STAR</span></h2>
+        <p className='text-white'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita nam assumenda dolores reprehenderit vitae dolore?</p>
       </div>
 
       <div className={footerCSS.FooterLinks}>
