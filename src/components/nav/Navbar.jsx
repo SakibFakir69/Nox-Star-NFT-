@@ -25,7 +25,7 @@ function Navbar() {
         <li><a href="#">Our Team</a></li>
         <li><a href="#">FAQ</a></li>
         <li><a href="#">Partners</a></li>
-        <li><a href="#">Contact</a></li>
+     
       </ul>
 
       {/* Buttons and Hamburger */}

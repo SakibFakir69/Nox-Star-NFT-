@@ -1,22 +1,22 @@
 .Work_Wrapper {
-  align-items: center !important;
+  align-items: center;
   text-align: center;
   padding: 60px 0;
+  position: relative;
   background-attachment: fixed;
-  background:url("./../../assets/bs-section.jpg");
+  background: url("./../../assets/bs-section.jpg") center/cover no-repeat;
 }
 
-.Work_Wrapper::after{
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(4,17,11,0.9);
-    top:0;
-    left: 0;
-    z-index: -1;
+.Work_Wrapper::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(4,17,11,0.9);
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
-
 
 .Cards {
   display: grid;
@@ -33,12 +33,14 @@
   padding: 40px 25px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start; 
+  text-align: left;  
   gap: 15px;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
   transition: all 0.4s ease;
   position: relative;
   overflow: hidden;
+  min-height: 320px;  
 }
 
 .Card:hover {
@@ -54,8 +56,9 @@
 
 .Card h3 {
   color: #fff;
-  font-size: 23px;
+  font-size: 28px;
   font-weight: 600;
+  line-height: 30px;
 }
 
 .Card p {
@@ -65,7 +68,7 @@
   max-width: 280px;
 }
 
-/* Responsive Layouts */
+
 @media screen and (max-width: 1200px) {
   .Cards {
     grid-template-columns: repeat(2, 1fr);
