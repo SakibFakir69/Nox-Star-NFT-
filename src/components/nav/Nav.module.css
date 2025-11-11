@@ -1,5 +1,4 @@
 
-
 .Nav_wrapper {
   height: 90px;
   width: 100%;
@@ -8,21 +7,26 @@
   justify-content: space-between;
   padding: 0 15%;
   background-color: #040b11;
-
   position: fixed;
   top: 0;
   left: 0;
-    z-index: 999;
+  z-index: 999;
 }
 
-.Nav_wrapper .logo a {
-  font-weight: 32px;
+.Nav_wrapper .logo a{
+
+  font-size: 32px;
   color: #fff;
+  font-weight: 700;
 }
+
 .Nav_wrapper ul li {
   display: inline-block;
   margin: 0 15px;
 }
+
+
+
 .Nav_wrapper ul li a {
   color: #fff;
 }

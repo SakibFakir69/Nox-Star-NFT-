@@ -10,13 +10,15 @@ function Navbar() {
 
   return (
     <nav className={navCss.Nav_wrapper}>
+
+
       {/* Logo */}
       <div className={navCss.logo}>
         <a href="#">NoxStar</a>
       </div>
 
       {/* Menu */}
-      <ul ref={menu} className="">
+      <ul ref={menu} className="text-white">
         <li><a href="#">Home</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Road Map</a></li>
