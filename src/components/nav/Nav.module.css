@@ -11,6 +11,7 @@
   top: 0;
   left: 0;
   z-index: 999;
+
 }
 
 .Nav_wrapper .logo a{
@@ -18,17 +19,20 @@
   font-size: 32px;
   color: #fff;
   font-weight: 700;
+ 
 }
 
 .Nav_wrapper ul li {
   display: inline-block;
-  margin: 0 15px;
+  margin: 0 7px;
+ 
 }
 
 
 
 .Nav_wrapper ul li a {
   color: #fff;
+ 
 }
 .Nav_wrapper ul li:hover a {
   color: var(--primary-color);

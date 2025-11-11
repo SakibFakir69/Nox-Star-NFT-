@@ -42,7 +42,7 @@ function Work() {
             <span></span>
             <span></span>
             <img src={item.img} alt={item.title} />
-            <h3>{item.title}</h3>
+            <h3 className='whitespace-nowrap'>{item.title}</h3>
             <p className='text-xs'>{item.desc}</p>
           </div>
         ))}

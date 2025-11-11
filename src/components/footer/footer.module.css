@@ -131,7 +131,14 @@
 
     .inputWrapper input, .inputWrapper button {
         width: 100%;
+          border-radius: 5px;
     }
+     .inputWrapper input{
+        
+        padding: 20px;
+        border-radius: 5px;
+       
+     }
 
     .FooterLinks h3 {
         font-size: 20px;
