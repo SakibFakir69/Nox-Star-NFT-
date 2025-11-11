@@ -20,7 +20,7 @@ function Team() {
 
   return (
     <div className={`${teamCSS.Team_Wrapper} section`}>
-      <h2 className="md:text-4xl text-xl text-white font-bold text-center">
+      <h2 style={{marginBottom:"20px"}} className="md:text-4xl text-xl text-white font-bold text-center mb-10">
         Our <span className="text-emerald-500">Team</span>
       </h2>
 
@@ -42,10 +42,10 @@ function Team() {
               768: { perPage: 1 },
             },
           }}
-          extensions={{ AutoScroll }}
+       
         >
           {teamMembers.map((member, index) => (
-            <SplideSlide key={index} className={'mb-10'}>
+            <SplideSlide key={index} className={''}>
               <div className={`${teamCSS.TeamCard} card `}>
                 <span></span>
                 <span></span>

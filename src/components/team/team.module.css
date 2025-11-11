@@ -35,12 +35,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  margin: auto;
   gap: 15px;
   position: relative;
   width: 100%;
   max-width: 250px;
   box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
+  z-index: 10;
 }
 
 /* Hover effect */
@@ -51,9 +54,9 @@
 
 /* Team member image */
 .TeamCard img {
-  width: 80%;
+  width: 100;
   max-width: 200px;
-  height: auto;
+  height: 100px;
   border-radius: 50%;
   border: 3px solid var(--primary-color);
   object-fit: cover;
@@ -100,6 +103,7 @@
   color: #000;
   transition: all 0.4s ease;
   cursor: pointer;
+  margin-top: -20px;
 }
 
 .TeamCard .social i:hover {
@@ -130,7 +134,7 @@
   }
 
   .TeamCard img {
-    width: 60%;
+    width:40%;
   }
 
   .TeamCard h3 {
