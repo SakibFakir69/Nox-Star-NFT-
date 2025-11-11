@@ -27,10 +27,11 @@ function Header() {
 
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis officiis cum obcaecati!</p>
 
-        <div className={headerCss.clients}>
-          <p className='Counters'>2021+ <span>Clients</span></p>
-          <p className='Counters'>20000+ <span>Whitelist Profiles</span></p>
-        </div>
+       <div className={`${headerCss.clients} `} >
+  <p className="Counters">2021+ <span className="whitespace-nowrap md:mt-2 mt-1 sm:leading-8 leading-10">Clients</span></p>
+  <p className="Counters">20000+ <span className="whitespace-nowrap  md:mt-2 mt-1 sm:leading-8 leading-10">Whitelist Profiles</span></p>
+</div>
+
 
         <div className={headerCss.header_btns}>
           <button className='btn'><i className='ri-wallet-line'></i>Connect Wallet</button>

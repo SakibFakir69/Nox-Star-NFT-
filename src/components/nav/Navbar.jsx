@@ -9,54 +9,39 @@ function Navbar() {
   };
 
   return (
-    <div className={navCss.Nav_wrapper} >
-
+    <nav className={navCss.Nav_wrapper}>
+      {/* Logo */}
       <div className={navCss.logo}>
-
         <a href="#">NoxStar</a>
       </div>
 
-      <ul ref={menu}   className="border border-red-600">
-        <li>
-          <a href="#">Home</a>
-        </li>
-        <li>
-          <a href="#">About</a>
-        </li>
-        <li>
-          <a href="#">Road Map</a>
-        </li>
-        <li>
-          <a href="#">Home</a>
-        </li>
-        <li>
-          <a href="#">Our Team</a>
-        </li>
-        <li>
-          <a href="#">FAQ</a>
-        </li>
-        <li>
-          <a href="#">Patners</a>
-        </li>
+      {/* Menu */}
+      <ul ref={menu} className="">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Road Map</a></li>
+        <li><a href="#">Our Team</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Partners</a></li>
+        <li><a href="#">Contact</a></li>
       </ul>
 
-      {/* button */}
-
-      <div className={navCss.NavBtns} >
-        <button className="btn ">
-          <i className="ri-discord-line"></i>
-          Discord
+      {/* Buttons and Hamburger */}
+      <div className={navCss.NavBtns}>
+        <button className="btn">
+          <i className="ri-discord-line"></i> Discord
+        </button>
+        <button className="btn">
+          <i className="ri-wallet-line"></i> Contact
         </button>
 
-        <button>
-          <i className="ri-wallet-line"></i>
-          Contact
-        </button>
-
-        <i onClick={menuHandeler} id={navCss.bars} className="ri-menu-line"></i>
-
+        <i
+          onClick={menuHandeler}
+          id={navCss.bars}
+          className="ri-menu-line"
+        ></i>
       </div>
-    </div>
+    </nav>
   );
 }
 

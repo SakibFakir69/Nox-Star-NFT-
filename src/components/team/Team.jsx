@@ -19,14 +19,13 @@ function Team() {
   ]
 
   return (
-    <div className={`${teamCSS.Team_Wrapper}  section`}>
-
-
+    <div className={`${teamCSS.Team_Wrapper} section`}>
       <h2 className="md:text-4xl text-xl text-white font-bold text-center">
         Our <span className="text-emerald-500">Team</span>
       </h2>
 
-      <div className={teamCSS.TeamCards}>
+      {/* Wrapper for padding */}
+      <div className={teamCSS.TeamCardsWrapper}>
         <Splide
           options={{
             type: 'loop',
@@ -36,7 +35,6 @@ function Team() {
             arrows: true,
             drag: 'free',
             focus: 'center',
-            autoScroll: { speed: 1 },
             breakpoints: {
               1400: { perPage: 4 },
               1024: { perPage: 3 },
@@ -44,11 +42,11 @@ function Team() {
               768: { perPage: 1 },
             },
           }}
-       
+          extensions={{ AutoScroll }}
         >
           {teamMembers.map((member, index) => (
-            <SplideSlide key={index}>
-              <div className={`${teamCSS.TeamCard} card`}>
+            <SplideSlide key={index} className={'mb-10'}>
+              <div className={`${teamCSS.TeamCard} card `}>
                 <span></span>
                 <span></span>
                 <img src={member.img} alt={member.name} />

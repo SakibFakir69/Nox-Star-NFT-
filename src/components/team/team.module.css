@@ -1,16 +1,30 @@
+/* Wrapper for Team Section */
 .Team_Wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 200px 0;
+  padding: 100px 0;
   color: #fff;
   width: 100%;
-
 }
 
-.TeamCards {
-  margin-top: 60px;
+/* Slider Wrapper with outer padding */
+.TeamCardsWrapper {
   width: 100%;
+  padding: 0 80px; /* outer padding */
+}
+
+/* Responsive padding for smaller devices */
+@media (max-width: 1024px) {
+  .TeamCardsWrapper {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .TeamCardsWrapper {
+    padding: 0 15px;
+  }
 }
 
 /* Each Team Card */
@@ -23,19 +37,19 @@
   align-items: center;
   gap: 15px;
   position: relative;
-  height: auto;
-  width: 90%;
-  margin: auto;
+  width: 100%;
+  max-width: 250px;
   box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
 }
 
+/* Hover effect */
 .TeamCard:hover {
   transform: translateY(-8px);
   box-shadow: 0 0 15px rgba(0, 255, 150, 0.3);
 }
 
-/* Team Member Image */
+/* Team member image */
 .TeamCard img {
   width: 80%;
   max-width: 200px;
@@ -45,16 +59,17 @@
   object-fit: cover;
 }
 
-/* Member Name */
+/* Member name and role */
 .TeamCard h3 {
   color: #fff;
   text-align: center;
   font-weight: 500;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin-top: 10px;
+  white-space: normal; /* wrap text properly */
+  word-break: break-word;
 }
 
-/* Role / Position */
 .TeamCard h3 small {
   display: block;
   color: var(--primary-color);
@@ -63,7 +78,7 @@
   margin-top: 4px;
 }
 
-/* Social Icons Container */
+/* Social icons */
 .TeamCard .social {
   display: flex;
   gap: 15px;
@@ -72,7 +87,6 @@
   margin-top: 25px;
 }
 
-/* Social Icons */
 .TeamCard .social i {
   height: 40px;
   width: 40px;
@@ -94,13 +108,15 @@
   color: #fff;
 }
 
-/* Splide Slide Flex Fix */
+/* Splide Slide Fix */
 .splide__slide {
   display: flex;
   justify-content: center;
+  align-items: flex-start; /* aligns top so card content is fully visible */
+  height: auto !important;
 }
 
-/* Responsive Tweaks */
+/* Responsive tweaks */
 @media (max-width: 1024px) {
   .TeamCard img {
     width: 70%;
